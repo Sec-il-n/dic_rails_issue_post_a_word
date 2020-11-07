@@ -1,0 +1,7 @@
+<h3>以下の内容で、登録する。</h3>
+<%= form_with(model: @tweet,local: true,url: tweets_path) do|form| %>
+  <%= form.hidden_field :content %>
+  <p>つぶやき:<%= @tweet.content %></p>
+  <%= form.submit %>
+  <%= form.submit '戻る',name: 'back' %>
+<% end %>
