@@ -9,6 +9,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
   end
   def edit
+
   end
   def create
     @tweet = Tweet.new(tweet_params)
@@ -27,15 +28,11 @@ class TweetsController < ApplicationController
     end
   end
   def update
-    respond_to do |format|
       if @tweet.update(tweet_params)
-        format.html { redirect_to @tweet, notice: 'Tweet was successfully updated.' }
-        format.json { render :show, status: :ok, location: @tweet }
+        redirect_to tweets_path, notice: 'Tweet was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+        render :edit
       end
-    end
   end
   def destroy
     @tweet.destroy
