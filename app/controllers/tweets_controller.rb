@@ -16,16 +16,18 @@ class TweetsController < ApplicationController
     if params[:back]
       render :new
     else
-      respond_to do |format|
+      # respond_to do |format|
         if @tweet.save
-          format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
-          format.json { render :show, status: :created, location: @tweet }
+          # format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
+          # format.json { render :show, status: :created, location: @tweet }
+          redirect_to tweets_path, notice: 'Tweet was successfully created.'
         else
-          format.html { render :new }
-          format.json { render json: @tweet.errors, status: :unprocessable_entity }
+          # format.html { render :new }
+          # format.json { render json: @tweet.errors, status: :unprocessable_entity }
+          render :new
         end
       end
-    end
+    # end
   end
   def update
       if @tweet.update(tweet_params)
@@ -36,10 +38,11 @@ class TweetsController < ApplicationController
   end
   def destroy
     @tweet.destroy
-    respond_to do |format|
-      format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+      redirect_to tweets_url, notice: 'Tweet was successfully destroyed.'
+      # format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
+      # format.json { head :no_content }
+    # end
   end
   def confirm
     @tweet = Tweet.new(tweet_params)
