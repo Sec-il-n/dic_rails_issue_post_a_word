@@ -10,9 +10,6 @@ class TweetsController < ApplicationController
   end
   def edit
   end
-
-  # POST /tweets
-  # POST /tweets.json
   def create
     @tweet = Tweet.new(tweet_params)
     if params[:back]
