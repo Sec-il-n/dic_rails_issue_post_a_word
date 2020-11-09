@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      tweet: つぶやき
+    attributes:
+      tweet:
+        content: 内容
