@@ -1,7 +1,21 @@
-<h3>以下の内容で、登録する。</h3>
-<%= form_with(model: @tweet,local: true,url: tweets_path) do|form| %>
-  <%= form.hidden_field :content %>
-  <p>つぶやき:<%= @tweet.content %></p>
-  <%= form.submit %>
-  <%= form.submit '戻る',name: 'back' %>
-<% end %>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>確認画面</title>
+    <link rel="stylesheet" href="/assets/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/assets/stylesheets/confirm.scss">
+  </head>
+  <body>
+    <div class="container">
+      <h3>以下の内容で投稿します。</h3>
+      <%= form_with(model: @tweet,local: true,url: tweets_path) do|form| %>
+        <%= form.hidden_field :content %>
+        <p class="confirmation"><%= @tweet.content %></p>
+        <%= form.submit %>
+        <%= form.submit '戻る',name: 'back' %>
+      <% end %>
+    </div>
+  </body>
+</html>
