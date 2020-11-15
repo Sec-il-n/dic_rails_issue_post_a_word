@@ -8,27 +8,26 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-<body>
-  <header>
-    <ul>
-      <%= link_to 'Post a word', root_path, class:'left' %>
-      <nav>
-        <ul class="clearfix">
-          <!-- 編集は:idがいるのでrinkできない -->
-          <!-- <div class="right"> -->
-            <%= link_to '一覧', tweets_path, class:'right' %>
-          <!-- </div> -->
-          <!-- <div class="right"> -->
-            <%= link_to '投稿する', new_tweet_path, class:'right' %>
-          <!-- </div> -->
-        </ul>
-      </nav>
-    </ul>
-  </header>
-  <%= yield %>
-  <footer>
-   <p>© 2015-2016 Post a word Corp.</p>
-  </footer>
-</body>
+  <body>
+    <header>
+      <ul>
+        <%= link_to 'Post a word', root_path, class:'left' %>
+        <nav>
+          <ul class="clearfix">
+            <!-- 編集は:idがいるのでrinkできない -->
+            <!-- <div class="right"> -->
+              <%= link_to '一覧', tweets_path, class:'right' %>
+            <!-- </div> -->
+            <!-- <div class="right"> -->
+              <%= link_to '投稿する', new_tweet_path, class:'right' %>
+            <!-- </div> -->
+          </ul>
+        </nav>
+      </ul>
+    </header>
+    <%= yield %>
+    <footer>
+     <p>© 2015-2016 Post a word Corp.</p>
+    </footer>
+  </body>
 </html>
