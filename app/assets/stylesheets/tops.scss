@@ -3,7 +3,6 @@ html {
   min-height: 100%;
 }
 body {
-  color: white;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -25,19 +24,24 @@ ul{
   background-attachment: fixed;
 }
 .about {
+  color: white;
   padding-bottom: 30px;
 }
 .about p {
   font-size: 1.5rem;
 }
 .function {
+  color: white;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 .left {
+    color: white;
     float: left;
 }
 .right {
+    color: white;
     float: right;
 }
 .title{
@@ -78,6 +82,7 @@ header ul a {
   width: 50px;
 }
 footer {
+  color: white;
   width: 100%;
   background-color:#2c3e50;
   padding: 20px 0 10px 0;

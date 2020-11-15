@@ -15,10 +15,13 @@
       <li class="left"><a href="#">Post a word</a></li>
       <nav>
         <ul class="clearfix">
-          <li class="right"><a href="#">編集</a></li>
-          <li class="right"><a href="#">一覧</a></li>
-          <li class="right"><a href="#">投稿する</a></li>
-          <!-- <li class="right"><a href="#">削除</a></li> -->
+          <!-- 編集は:idがいるのでrinkできない -->
+          <!-- <div class="right"> -->
+            <%= link_to '一覧', tweets_path, class:'right' %>
+          <!-- </div> -->
+          <!-- <div class="right"> -->
+            <%= link_to '投稿する', new_tweet_path, class:'right' %>
+          <!-- </div> -->
         </ul>
       </nav>
     </ul>
